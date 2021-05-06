@@ -1,0 +1,14 @@
+{
+  "users": [
+    {
+      "id": 2,
+      "name": "Erick Henrique Silva",
+      "email": "erick.henrique@aluno.ufabc.com.br"
+    },
+    {
+      "name": "Flavia",
+      "email": "flavia@teste.com.br",
+      "id": 3
+    }
+  ]
+}

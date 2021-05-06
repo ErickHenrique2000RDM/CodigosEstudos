@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        div{
+            border: 1px solid #000;
+        }
+
+        .cabecalho{
+            grid-area: cabecalho;
+        }
+        .navegacao{
+            grid-area: navegacao;
+        }
+        .conteudo{
+            grid-area: conteudo;
+        }
+        .rodape{
+            grid-area: rodape;
+        }
+
+        body{
+            display: grid;
+            min-height: 100vh;
+            grid-template-columns: 1fr 5fr;
+            grid-template-rows: 1fr 10fr 1fr;
+            grid-template-areas:
+                'cabecalho cabecalho'
+                'navegacao conteudo'
+                'rodape rodape'
+        }
+
+        @media(max-width: 700px){
+            body{
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr 7fr 1fr;
+                grid-template-areas:
+                    'cabecalho'
+                    'navegacao'
+                    'conteudo'
+                    'rodape'
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cabecalho">Cabeçalho</div>
+    <div class="navegacao">Nav</div>
+    <div class="conteudo">Main</div>
+    <div class="rodape">Rodapé</div>
+</body>
+</html>
